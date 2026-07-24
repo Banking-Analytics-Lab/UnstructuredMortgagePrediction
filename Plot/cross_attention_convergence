@@ -1,0 +1,6 @@
+## Cross-Attention Convergence
+
+The training and validation loss curves for the Cross-Attention fusion
+baseline are provided below.
+
+![Cross-Attention Convergence](figures/cross_attention_convergence.png)
