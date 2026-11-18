@@ -1,0 +1,15 @@
+# The package versions used for the paper were not recorded. Package names only, from the imports in code/.
+# google.colab (the Drive mount) exists only in Google Colab and is not listed.
+# TFBertModel is not in transformers 5, so the code needs a transformers 4.x release.
+# The BERT weights are loaded with from_pt=True, which also needs PyTorch (torch).
+keras
+keras-preprocessing
+matplotlib
+mlxtend
+numpy
+pandas
+scikit-learn
+seaborn
+tensorflow
+transformers
+wordcloud
