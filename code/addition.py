@@ -120,7 +120,7 @@ print("All required libraries successfully imported.")
 from google.colab import drive
 drive.mount('/content/drive')
 
-folder_path = "/content/drive/MyDrive/lidar/data/"
+folder_path = os.environ.get("DATA_DIR", "data") + "/"
 
 file_path1 = folder_path + 'data_clean (1).csv'
 file_path2 = folder_path + 'clean_housing5.csv'
@@ -266,7 +266,7 @@ merged_data
 import os
 
 # Define paths
-zip_file_path = "/content/drive/MyDrive/lidar/data/int.zip"  # Adjust if necessary
+zip_file_path = os.path.join(os.environ.get("DATA_DIR", "data"), "int.zip")  # Adjust if necessary
 extract_folder = "data_image/first_class"
 
 # Ensure the destination folder exists
@@ -286,7 +286,7 @@ folder_name.mkdir(parents=True, exist_ok=True)  # Creates folder if it doesn't e
 print(f"Folder '{folder_name}' created successfully!")
 
 # Define source directory (current directory) and destination folder
-source_dir = Path("/content/drive/MyDrive/lidar/data/int/")  # Current directory
+source_dir = Path(os.environ.get("DATA_DIR", "data")) / "int"  # Current directory
 destination_folder = Path("data_image/first_class/")
 
 # Ensure the destination folder exists
@@ -908,7 +908,7 @@ from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
 
 import os
-out_dir = "/content/drive/MyDrive/mm_experiments/run_addition"
+out_dir = os.path.join(os.environ.get("OUTPUT_DIR", "outputs"), "run_addition")
 os.makedirs(out_dir, exist_ok=True)
 
 import pandas as pd
